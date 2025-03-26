@@ -290,36 +290,7 @@ const COMPONENTS_PERMISSION = {
 		},
 	],
 };
-const FUNCTIONS_PERMISSION = {
-	id: "8132044808088488",
-	parentId: "",
-	label: "sys.menu.functions",
-	name: "functions",
-	icon: "solar:plain-2-bold-duotone",
-	type: PermissionType.CATALOGUE,
-	route: "functions",
-	order: 4,
-	children: [
-		{
-			id: "3667930780705750",
-			parentId: "8132044808088488",
-			label: "sys.menu.clipboard",
-			name: "Clipboard",
-			type: PermissionType.MENU,
-			route: "clipboard",
-			component: "/functions/clipboard/index.tsx",
-		},
-		{
-			id: "3667930780705751",
-			parentId: "8132044808088488",
-			label: "sys.menu.token_expired",
-			name: "Token Expired",
-			type: PermissionType.MENU,
-			route: "token-expired",
-			component: "/functions/token-expired/index.tsx",
-		},
-	],
-};
+
 const MENU_LEVEL_PERMISSION = {
 	id: "0194818428516575",
 	parentId: "",
@@ -518,7 +489,6 @@ export const PERMISSION_LIST = [
 	DASHBOARD_PERMISSION,
 	MANAGEMENT_PERMISSION,
 	COMPONENTS_PERMISSION,
-	FUNCTIONS_PERMISSION,
 	MENU_LEVEL_PERMISSION,
 	ERRORS_PERMISSION,
 	...OTHERS_PERMISSION,
@@ -543,7 +513,7 @@ const TEST_ROLE = {
 	status: BasicStatus.ENABLE,
 	order: 2,
 	desc: "test",
-	permission: [DASHBOARD_PERMISSION, COMPONENTS_PERMISSION, FUNCTIONS_PERMISSION],
+	permission: [DASHBOARD_PERMISSION, COMPONENTS_PERMISSION],
 };
 export const ROLE_LIST = [ADMIN_ROLE, TEST_ROLE];
 

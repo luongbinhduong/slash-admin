@@ -18,26 +18,24 @@ const dashboard: AppRouteObject = {
 		</Suspense>
 	),
 	meta: {
-		label: "sys.menu.dashboard",
-		icon: (
-			<SvgIcon icon="ic-analysis" className="ant-menu-item-icon" size="24" />
-		),
+		label: "Bảng điều khiển",
+		icon: <SvgIcon icon="ic-analysis" className="ant-menu-item-icon" size="24" />,
 		key: "/dashboard",
 	},
 	children: [
 		{
 			index: true,
-			element: <Navigate to="workbench" replace />,
+			element: <Navigate to="general" replace />,
 		},
 		{
-			path: "workbench",
+			path: "general",
 			element: <HomePage />,
-			meta: { label: "sys.menu.workbench", key: "/dashboard/workbench" },
+			meta: { label: "Tổng quan", key: "/dashboard/general" },
 		},
 		{
-			path: "analysis",
+			path: "report",
 			element: <Analysis />,
-			meta: { label: "sys.menu.analysis", key: "/dashboard/analysis" },
+			meta: { label: "Báo cáo", key: "/dashboard/report" },
 		},
 	],
 };

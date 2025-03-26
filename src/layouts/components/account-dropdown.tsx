@@ -81,7 +81,7 @@ export default function AccountDropdown() {
 		{
 			label: (
 				<button className="font-bold text-warning" type="button">
-					{t("sys.login.logout")}
+					Đăng xuất
 				</button>
 			),
 			key: "4",

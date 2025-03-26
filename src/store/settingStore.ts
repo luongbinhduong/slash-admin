@@ -32,13 +32,13 @@ const useSettingStore = create<SettingStore>()(
 				themeColorPresets: ThemeColorPresets.Default,
 				themeMode: ThemeMode.Light,
 				themeLayout: ThemeLayout.Vertical,
-				themeStretch: false,
+				themeStretch: true,
 				breadCrumb: true,
-				multiTab: true,
+				multiTab: false,
 				darkSidebar: false,
 				fontFamily: FontFamilyPreset.openSans,
 				fontSize: Number(typographyTokens.fontSize.sm),
-				direction: "ltr",
+				direction: "ltr" as const,
 			},
 			actions: {
 				setSettings: (settings) => {
